@@ -11,7 +11,7 @@ const Categories = () => {
     const [toys, setToys] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/categories/${id}`)
+        fetch(`https://piku-toy-server.vercel.app/categories/${id}`)
             .then(res => res.json())
             .then(data => setToys(data));
     }, [])

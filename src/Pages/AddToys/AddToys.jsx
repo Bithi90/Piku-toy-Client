@@ -30,7 +30,7 @@ const AddToys = () => {
 
 
 
-        fetch('http://localhost:5000/addToy', {
+        fetch('https://piku-toy-server.vercel.app/addToy', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

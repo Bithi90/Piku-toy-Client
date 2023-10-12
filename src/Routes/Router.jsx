@@ -30,7 +30,7 @@ export const router = createBrowserRouter([
       {
         path: '/category/:id',
         element: <Categories></Categories>,
-        loader: ({ params }) => fetch(`http://localhost:5000/categories/${params.id}`)
+        loader: ({ params }) => fetch(`https://piku-toy-server.vercel.app/categories/${params.id}`)
       },
       {
         path: '/login',
@@ -67,7 +67,7 @@ export const router = createBrowserRouter([
       {
         path: ':id',
         element:<PrivateRoute><ToyDetails></ToyDetails></PrivateRoute> ,
-        loader: ({ params }) => fetch(`http://localhost:5000/toy/${params.id}`)
+        loader: ({ params }) => fetch(`https://piku-toy-server.vercel.app/toy/${params.id}`)
 
       }
       

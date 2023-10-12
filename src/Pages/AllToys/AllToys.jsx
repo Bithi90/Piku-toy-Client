@@ -8,7 +8,7 @@ const AllToys = () => {
     console.log(user);
     const [allToys, setAllToys] = useState([]);
 
-    const url = `http://localhost:5000/toy`;
+    const url = `https://piku-toy-server.vercel.app/toy`;
 
     useEffect(() => {
         fetch(url)
@@ -20,7 +20,7 @@ const AllToys = () => {
         const proceed = confirm('Are you sure you want to delete?');
 
         if (proceed) {
-            fetch(`http://localhost:5000/toy/${id}`, {
+            fetch(`https://piku-toy-server.vercel.app/toy/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -37,7 +37,7 @@ const AllToys = () => {
 
 
     const handleUpdate = id => {
-        fetch(`http://localhost:5000/toy/${id}`, {
+        fetch(`https://piku-toy-server.vercel.app/toy/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
